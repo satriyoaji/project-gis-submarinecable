@@ -49,7 +49,7 @@ div.infoBoxContent {position:relative;float:left;min-width:100px;padding:5px 10p
 div.infoBoxPointer {position:absolute;bottom:-9px;left:56px;width:10px;height:9px;background:url(images/info-box-pointer.png);}
 
 ul {margin:0;padding:0;}
-ul.features, a, a:visited {color:#0071bc;}
+ul.features, a, a:visited {color:#595861;}
 ul.features li a { display:block; min-height:18px; line-height:18px; }
 ul.properties {padding:0 0 18px 0;}
 ul.properties strong {font-weight:normal; color:#052743;}
