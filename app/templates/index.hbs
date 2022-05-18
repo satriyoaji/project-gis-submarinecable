@@ -1,12 +1,12 @@
 <h2>
-	Submarine Cables
+  Submarine Cables
 </h2>
 <div id="description">
-	<ul class="features">
-		{{#each model as |cable|}}
-			<li>
-				{{#link-to "submarine-cable" cable.id}}{{cable.name}}{{/link-to}}
-			</li>
-		{{/each}}
-	</ul>
+  <ul class="features">
+    {{#each model as |cable|}}
+      <li style="padding: .3rem 0; border-bottom: 1px solid rgb(240,240,240);">
+        {{#link-to "submarine-cable" cable.id}}{{cable.name}}{{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
 </div>
