@@ -18,6 +18,14 @@ class SubmarineCable.Map
     {"elementType": "labels.text.fill","stylers": [{ "color": "#808080" }]}
   ];
 
+  @mapDark: [
+    {"stylers": [{ "lightness": "-25" },{ "saturation": "-50" },{ "gamma": "0.75" }]},
+    {"featureType": "road", "elementType": "geometry", "stylers": [{ "lightness": "10" }, { "visibility": "simplified" }]}
+    {"featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "simplified" }]},
+    {"featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{ "visibility": "simplified" }]},
+    {"featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }]}
+  ]
+
   landingIcon: () ->
     { url: '/assets/images/marker.png', size: new google.maps.Size(10, 10), anchor: new google.maps.Point(5, 5) }
 
@@ -108,8 +116,8 @@ class SubmarineCable.Map
     @infoBox.close()
 
   resetBounds: () ->
-    @gmap.setZoom 2
-    @gmap.setCenter new google.maps.LatLng(30.0,-30.0)
+    @gmap.setZoom 10
+    @gmap.setCenter new google.maps.LatLng(‑6.200000, 106.816666)
 
   setEvents: () ->
     google.maps.event.addListener @gmap, 'click', (event) =>
@@ -135,8 +143,8 @@ class SubmarineCable.Map
       maxZoom: 8,
       minZoom: 2,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: SubmarineCable.Map.mapStyles,
-      center: new google.maps.LatLng(30.0,-30.0),
+      styles: SubmarineCable.Map.mapDark,
+      center: new google.maps.LatLng(‑6.200000, 106.816666),
       streetViewControl: false,
       mapTypeControl: false,
       zoomControlOptions:

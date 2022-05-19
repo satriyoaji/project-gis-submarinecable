@@ -16,20 +16,20 @@ class SubmarineCable.Search
             jQuery(".ui-menu-item a:contains(Connected)").addClass('country')
             jQuery(".ui-menu-item a:contains(Ready)").addClass('rfs')
           close: (event, ui) ->
-            jQuery("#search").val("Search")
+            jQuery("#search").val("")
             jQuery("#search").blur()
           select: (event, ui) ->
             window.location.href = ui.item.url
 
 
     # Search Input Focus/Blur
-    jQuery("#search").val("Search").focus () ->
+    jQuery("#search").val("").focus () ->
       jQuery(this).addClass("focus")
       jQuery("#nav").addClass("focus")
-      jQuery(this).val("") if jQuery(this).val() == "Search"
+      jQuery(this).val("") if jQuery(this).val() == ""
       if window.matchMedia("only screen and (max-width:736px) and (orientation : portrait)").matches
         console.log "mobile search"
         window.scrollTo(0, jQuery("#nav").offset().top)
     .blur () ->
-      jQuery(this).removeClass("focus").val("Search")
+      jQuery(this).removeClass("focus").val("")
       jQuery("#nav").removeClass("focus")
