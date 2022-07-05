@@ -12,7 +12,7 @@ Install a LTS version of [Node.js](https://nodejs.org/), [Yarn](https://yarnpkg.
     $ git clone git://github.com/satriyoaji/project-gis-submarinecable
     $ cd project-gis-submarinecable
     $ yarn install
-    $ npm start
+    $ yarn start
 
 How did we make this Submarine Cable Map?
 -------------------------------
